@@ -1,5 +1,6 @@
 class EmployeeController < ApplicationController
 
+  #Code for Storing the Employee details : Task 1 
   def store
     employee = Employee.build(employee_params)
 
@@ -9,7 +10,10 @@ class EmployeeController < ApplicationController
       render json: { success: false, errors: employee.errors.full_messages}
     end
   end
-
+  #End of Code for Storing the Employee details : Task 1 
+    
+    
+  #Code for Storing the Employee Tax Deductions : Task 2
   def tax_deductions
     employee_id = params[:employee_id]
 
@@ -60,6 +64,7 @@ class EmployeeController < ApplicationController
     end
 
   end
+  #End of Code for Storing the Employee Tax Deductions : Task 2
 
   private
 
